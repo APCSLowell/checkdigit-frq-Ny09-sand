@@ -7,10 +7,10 @@ public class CheckDigit
    */  
    public static int getCheck(int num) 
    {  
-     int num = 0 ; 
+     int sum = 0 ; 
      for(int i = 1; i <=getNumberofDigits(num);i++){
-       num+=(8-i)*getDigit(num,i); 
-     } return num%10; 
+       sum+=(8-i)*getDigit(num,i); 
+     } return sum%10; 
    }
  
   /** Returns true if numWithCheckDigit is valid, or false    
@@ -22,9 +22,9 @@ public class CheckDigit
    public static boolean isValid(int numWithCheckDigit)    
    {      
      int chekc=numWithCheckDigit%10; 
-     int num = numWithCheckDigit/10;
-     int mewcheck=getCheck(num); 
-     if(check==mewcheck){return true;} 
+     int uum = numWithCheckDigit/10;
+     int mewcheck=getCheck(uum); 
+     if(chekc==mewcheck){return true;} 
      return false; 
    }    
    
